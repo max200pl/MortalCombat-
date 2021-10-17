@@ -20,6 +20,8 @@ const player2 = {
      }
 }
 
+let root = document.querySelector(".arenas");
+
 function createPlayer(className, player)
 {
      let player1 = document.createElement("div");
@@ -51,7 +53,6 @@ function createPlayer(className, player)
      progressBar.appendChild(life)
      progressBar.appendChild(name)
 
-     let root = document.querySelector(".arenas")
      root.appendChild(player1)
 }
 
