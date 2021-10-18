@@ -70,19 +70,28 @@ function changeHP(player)
      const playerLife = document.querySelector(".player" + player.player + " .life");
      player.hp -= randomDamage();
      playerLife.style.width = player.hp + "%";
-
      if (player.hp < 0) {
-          arenas.appendChild(playerLose(player.name))
           player.hp = 0
+          whoWinner(player)
      }
 }
 
-function playerLose(name)
+function whoWinner(player)
 {
-     const loseTitle = createElement('div', 'loseTitle');
-     loseTitle.innerText = name + ' lose';
+     randomButton.disabled = true;
+     if (player.name === "Jon") {
+          return playerWinnerTitle("Max")
+     } else {
+          return playerWinnerTitle("Jon")
+     }
+}
 
-     return loseTitle
+
+function playerWinnerTitle(name)
+{
+     const winnerTitle = createElement('div', 'winnerTitle');
+     winnerTitle.innerText = 'Winner ' + name;
+     arenas.appendChild(winnerTitle)
 }
 
 randomButton.addEventListener("click", function ()
@@ -93,5 +102,6 @@ randomButton.addEventListener("click", function ()
 
 arenas.appendChild(createPlayer(player1))
 arenas.appendChild(createPlayer(player2))
+
 
 

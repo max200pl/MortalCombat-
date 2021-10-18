@@ -1,15 +1,11 @@
 @font-face {
     font-family: 'Mortal Kombat 3';
-    src: url('./assets/fonts/MortalKombat3-Regular.eot');
-    src: url('./assets/fonts/MortalKombat3-Regular.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/MortalKombat3-Regular.woff2') format('woff2'),
-    url('./assets/fonts/MortalKombat3-Regular.woff') format('woff'),
-    url('./assets/fonts/MortalKombat3-Regular.ttf') format('truetype');
+    src: url("./assets/fonts/MortalKombat3-Regular.eot");
+    src: url("./assets/fonts/MortalKombat3-Regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/MortalKombat3-Regular.woff2") format("woff2"), url("./assets/fonts/MortalKombat3-Regular.woff") format("woff"), url("./assets/fonts/MortalKombat3-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-
 
 *,
 *:before,
@@ -241,6 +237,7 @@ body {
     font-family: "Mortal Kombat 3";
     outline: none;
 }
+
 .button::after {
     content: "";
     position: absolute;
@@ -252,17 +249,20 @@ body {
     border-radius: 4px;
     z-index: -1;
 }
+
 .button:hover {
     background-color: #f5d100;
 }
+
 .button:active {
     top: 2px;
 }
+
 .button:active::after {
     top: 1px;
 }
 
-.loseTitle {
+.winnerTitle {
     position: absolute;
     top: 25%;
     left: 50%;
@@ -271,6 +271,4 @@ body {
     text-transform: uppercase;
     z-index: 1000;
     color: white;
-    font-family: "Mortal Kombat 3";
 }
-
